@@ -6,6 +6,7 @@ module.exports = {
   darkMode: 'class', // false, 'media' or 'class'
   theme: {
     extend: {
+      // Custom grayscale theme
       colors: {
         gray: {
           900: '#202225',
@@ -18,8 +19,13 @@ module.exports = {
           100: '#f2f3f5',
         },
       },
+      // Custom spacing 
       spacing: {
         88: '22rem',
+      },
+      // Custom border radius for the icons
+      borderRadius: {
+        'circular': '36px',
       },
     },
   },

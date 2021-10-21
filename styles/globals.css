@@ -21,10 +21,10 @@
     /* Flexbox with centered items, 2 units of margin above and below, shadow and colours */
     /* Hover animation, linearly changes colour and border shape over 300ms */
     @apply relative flex items-center justify-center 
-      h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+      h-16 w-16 mt-1 mb-1 mx-auto shadow-lg
       bg-gray-800 text-green-500
       hover:bg-green-600 hover:text-white
-      rounded-3xl hover:rounded-xl
+      rounded-circular hover:rounded-3xl
       transition-all duration-300 ease-linear
       cursor-pointer;
   }
@@ -33,19 +33,20 @@
   /* Absolutely positioned with border radius and shadow, with 100ms appear/disappear animation */
   /* Starts off at scale 0, so completely hidden */
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+    @apply absolute w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-md
     text-white bg-gray-900 
     text-xs font-bold 
     transition-all duration-100 scale-0 origin-left;
   }
 
-  /* TODO: Keep going */
+  /* Divider */
   .sidebar-hr {
-    @apply bg-gray-200 dark:bg-gray-800 
-    border border-gray-200 dark:border-gray-800 rounded-full
+    @apply bg-gray-600 dark:bg-gray-800 
+    border border-gray-600 dark:border-gray-800 rounded-full
     mx-2;
   }
 
+  /* TODO: Keep going */
   .top-navigation {
     @apply flex flex-row items-center justify-evenly 
     bg-gray-300 dark:bg-gray-700 bg-opacity-90 
