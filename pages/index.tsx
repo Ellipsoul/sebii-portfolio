@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Home() {
+export default function App() {
   return (
-    <div>
-      Hi Mom
+    <div className="flex bg-blue-500">
+      Does Tailwind work? Yes it does!
     </div>
   )
 }
