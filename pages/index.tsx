@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { ReactElement } from 'react';
+import Sidebar from '../components/Sidebar';
 
-export default function App() {
+export default function App():ReactElement {
   return (
-    <div className="flex bg-blue-500">
-      Does Tailwind work? Yes it does!
-    </div>
+    <Sidebar />
   )
 }
