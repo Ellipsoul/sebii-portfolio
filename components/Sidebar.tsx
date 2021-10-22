@@ -64,7 +64,7 @@ export default function Sidebar():ReactElement {
     // Fixed to the top left, height of full screen, 16 units width, 0 margin
     // Flex display in column direction with background and text colour, and a shadow 
     <div className='fixed top-0 left-0 h-screen w-24 m-0 flex flex-col 
-                  bg-gray-900 text-white shadow-lg justify-around'>
+                  bg-white dark:bg-gray-900 text-white shadow-lg justify-around'>
       {icons.map((v) => v.isIcon ? SideBarIcon(v.element, v.tooltip) : v.element)}
     </div>
   )
