@@ -5,7 +5,7 @@ import ContentContainer from '../components/ContentContainer';
 
 export default function App():ReactElement {
   return (
-    <div className='flex'>
+    <div className='flex h-screen w-screen items-start'>
       <Sidebar key={uuidv4()}/>
       <ContentContainer key={uuidv4()}/>
     </div>

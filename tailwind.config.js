@@ -18,6 +18,18 @@ module.exports = {
           200: '#ebedef',
           100: '#f2f3f5',
         },
+        vvprimary: {
+          light: '#C592C9',
+          blend: '#311732',
+          strong: '#EA85F4',
+          dark: '#150916',
+          darkblend: '#230F24',
+        },
+        vvsecondary: {
+          light: '#D7D6DD',
+          blend: '#8DAECD',
+          dark: '#311732',
+        }
       },
       // Custom spacing 
       spacing: {
@@ -27,6 +39,10 @@ module.exports = {
       borderRadius: {
         'circular': '36px',
       },
+      // Custom heights for top navigation
+      height: {
+        topbar: 'calc(2vh + 40px)',
+      }
     },
   },
   variants: {
