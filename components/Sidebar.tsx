@@ -95,11 +95,11 @@ const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):
     }
 
   return (
+    // media variable state will be the same as the tooltip
     // Use group to have an action act on all its children
     <div className='sidebar-icon group' key={uuidv4()} onMouseDown={() => handleMediaClick(text)}>
       {icon}
       {/* When hovered over, scale tooltip to 100% */}
-      {/* TODO: Change the tooltip background colouring based on theme and theme colours */}
       <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
     </div>
   )

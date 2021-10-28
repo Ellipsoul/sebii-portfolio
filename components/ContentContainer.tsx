@@ -8,7 +8,7 @@ import Twitch from './Twitch';
 import Discord from './Discord';
 import SoundCloud from './SoundCloud';
 import Tiktok from './Tiktok';
-import YouTube from './Youtube';
+import YouTube from './YouTube';
 import Twitter from './Twitter';
 
 // Contains the main social/media widget to be inserted
