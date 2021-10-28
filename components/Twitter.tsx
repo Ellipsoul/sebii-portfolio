@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+// @ts-ignore Typescript can't find this one either
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { useTheme } from 'next-themes';
 
 export default function Twitter() {
+  const { theme } = useTheme();
+
   return (
-    <div>
-      Hi Twitter
-    </div>
+    <TwitterTimelineEmbed
+      key={theme}
+      sourceType="profile"
+      screenName="sebseb122_"
+      autoHeight="true"
+      options={{width: 1200, tweetLimit: 5}}
+      theme={theme}
+      noFooter
+    />
   )
 }

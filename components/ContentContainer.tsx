@@ -16,7 +16,7 @@ export default function ContentContainer():ReactElement {
   // Dynamically change the media content based on user clicks on left
   const [media, _] = useContext(MediaContext);
 
-  // 
+  // List of media components that can be rendered
   function renderMedia(media:string):ReactElement {
     let component:ReactElement;
 
