@@ -35,7 +35,6 @@ export default function Sidebar():ReactElement {
       element: <Divider key={uuidv4()}/>, 
       isIcon: false},
     {
-      
       element: <BsTwitch 
         size={iconSize} 
         key={uuidv4()} />, 

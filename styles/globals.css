@@ -44,9 +44,9 @@
 
   /* Divider */
   .sidebar-hr {
-    @apply bg-gray-600 dark:bg-gray-800 
-    border border-gray-600 dark:border-gray-800 rounded-full
-    mx-2;
+    @apply w-3/4 self-center mx-2 border-2 rounded-full
+    bg-vvprimary-darkblend dark:bg-white
+    border-vvprimary-darkblend dark:border-white;
   }
 
   /* Topbar with Title and Theme Switcher */
