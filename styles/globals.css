@@ -23,7 +23,7 @@
     @apply relative flex items-center justify-center 
       h-16 w-16 mt-1 mb-1 mx-auto shadow-lg
       bg-vvsecondary-light dark:bg-vvprimary-blend 
-      text-vvprimary-blend dark:text-vvsecondary-light
+      text-vvprimary-blend dark:text-gray-50
       hover:bg-vvprimary-blend dark:hover:bg-vvprimary-light
       hover:text-white dark:hover:text-vvsecondary-dark
       rounded-circular hover:rounded-3xl
@@ -73,7 +73,7 @@
 
   .title-text {
     @apply text-4xl px-5
-    text-vvprimary-blend dark:text-vvsecondary-light
+    text-vvprimary-blend dark:text-gray-50
     tracking-wider font-semibold text-opacity-90
     mr-auto ml-2 my-auto 
     transition duration-300 ease-in-out;
