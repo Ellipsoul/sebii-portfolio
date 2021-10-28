@@ -1,8 +1,9 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useContext } from 'react'
 
 import { FaTiktok, FaDiscord, FaSoundcloud } from 'react-icons/fa';
 import { BsTwitch, BsYoutube, BsSpotify, BsTwitter } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
+import MediaContext from '../contexts/media';
 
 export interface IconInterface {
   element: ReactElement
@@ -19,11 +20,15 @@ export default function Sidebar():ReactElement {
   // Array of icons and dividers
   const icons:IconInterface[] = [
     {
-      element: <BsSpotify size={iconSize} key={uuidv4()} />, 
+      element: <BsSpotify 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "Spotify"},
     {
-      element: <FaSoundcloud size={iconSize} key={uuidv4()} />, 
+      element: <FaSoundcloud 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "SoundCloud"},
     {
@@ -31,11 +36,15 @@ export default function Sidebar():ReactElement {
       isIcon: false},
     {
       
-      element: <BsTwitch size={iconSize} key={uuidv4()} />, 
+      element: <BsTwitch 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "Twitch"},
     {
-      element: <FaDiscord size={iconSize} key={uuidv4()} />, 
+      element: <FaDiscord 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "Discord"},
     {
@@ -43,21 +52,28 @@ export default function Sidebar():ReactElement {
       isIcon: false
     },
     {
-      element: <BsTwitter size={iconSize} key={uuidv4()} />, 
+      element: <BsTwitter 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "Twitter"
     },
     {
-      element: <FaTiktok size={iconSize} key={uuidv4()} />, 
+      element: <FaTiktok 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "Tiktok"
     },
     {
-      element: <BsYoutube size={iconSize} key={uuidv4()} />, 
+      element: <BsYoutube 
+        size={iconSize} 
+        key={uuidv4()} />, 
       isIcon: true, 
       tooltip: "YouTube"
     },
-  ]
+  ];
+
 
   // Map the array of icons/dividers to its respective component
   return (
@@ -71,14 +87,23 @@ export default function Sidebar():ReactElement {
 }
 
 // Individual icon component with tooltip
-const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):ReactElement => (
-  // Use group to have an action act on all its children
-  <div className='sidebar-icon group' key={uuidv4()}>
-    {icon}
-    {/* When hovered over, scale tooltip to 100% */}
-    <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
-  </div>
-);
+const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):ReactElement => {
+    // Allow sidebar to control state of loaded media
+    const [_, setMedia] = useContext(MediaContext);
+    const handleMediaClick = (media:string):void => {
+      setMedia(media);
+    }
+
+  return (
+    // Use group to have an action act on all its children
+    <div className='sidebar-icon group' key={uuidv4()} onMouseDown={() => handleMediaClick(text)}>
+      {icon}
+      {/* When hovered over, scale tooltip to 100% */}
+      {/* TODO: Change the tooltip background colouring based on theme and theme colours */}
+      <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  )
+};
 
 // Simple line divider
 const Divider = () => <hr className="sidebar-hr" />;
