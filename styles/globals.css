@@ -31,6 +31,12 @@
       cursor-pointer;
   }
 
+  /* Currently selected icon */
+  .sidebar-icon-selected {
+    @apply border-2
+    border-vvprimary-darkblend dark:border-vvsecondary-light;
+  }
+
   /* Sidebar icons tooltip styling */
   /* Absolutely positioned with border radius and shadow, with 100ms appear/disappear animation */
   /* Starts off at scale 0, so completely hidden */

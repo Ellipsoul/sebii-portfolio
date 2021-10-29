@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext } from 'react'
+import React, { ReactElement, useContext, useEffect } from 'react'
 
 import { FaTiktok, FaDiscord, FaSoundcloud } from 'react-icons/fa';
 import { BsTwitch, BsYoutube, BsSpotify, BsTwitter } from 'react-icons/bs';
@@ -73,6 +73,12 @@ export default function Sidebar():ReactElement {
     },
   ];
 
+  // When component loads up, set the media to Spotify by default
+  const [_, setMedia] = useContext(MediaContext);
+  useEffect(() => {
+    setMedia("Spotify")
+  }, [setMedia])
+
 
   // Map the array of icons/dividers to its respective component
   return (
@@ -88,7 +94,7 @@ export default function Sidebar():ReactElement {
 // Individual icon component with tooltip
 const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):ReactElement => {
     // Allow sidebar to control state of loaded media
-    const [_, setMedia] = useContext(MediaContext);
+    const [media, setMedia] = useContext(MediaContext);
     const handleMediaClick = (media:string):void => {
       setMedia(media);
     }
@@ -96,7 +102,11 @@ const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):
   return (
     // media variable state will be the same as the tooltip
     // Use group to have an action act on all its children
-    <div className='sidebar-icon group' key={uuidv4()} onMouseDown={() => handleMediaClick(text)}>
+    <div 
+      className={`sidebar-icon group ${media === text ? "sidebar-icon-selected" : ""}`} 
+      key={uuidv4()} 
+      onMouseDown={() => handleMediaClick(text)}
+    >
       {icon}
       {/* When hovered over, scale tooltip to 100% */}
       <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
