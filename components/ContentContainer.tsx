@@ -53,7 +53,8 @@ export default function ContentContainer():ReactElement {
   return (
     <div className="content-container">
       <TopNavigation />
-      <div className="media-content">
+      {/* Special width for Twitter since component doesn't behave when > 1200px */}
+      <div className={`media-content ${media === 'Twitter' ? 'twitter-content' : ''}`}>
         {renderMedia(media)}
       </div>
     </div>

@@ -46,6 +46,8 @@ module.exports = {
       margin: {
         topbarIcon: 'calc(1.5vw)',
         userIcon: 'calc(0.5rem + 2.5vw)',
+        mediaContentX: '2vw',
+        mediaContextY: '2vh',
       }
     },
   },

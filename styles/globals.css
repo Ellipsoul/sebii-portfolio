@@ -95,8 +95,12 @@
   }
 
   .media-content {
-    @apply grid place-items-center h-full /* */
-      m-5 overflow-y-auto rounded-2xl;
+    @apply grid place-items-center h-full
+      mx-mediaContentX my-mediaContextY overflow-y-auto rounded-2xl;
+  }
+
+  .twitter-content {
+    @apply w-4/5 mx-auto;
   }
 
   .media-content::-webkit-scrollbar {
