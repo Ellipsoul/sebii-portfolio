@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  FaRegBell,
   FaUserCircle,
   FaMoon,
   FaSun,
@@ -12,7 +11,6 @@ export default function TopNavigation() {
     <div className='top-navigation'>
       <Title />
       <ThemeIcon />
-      <BellIcon />
       <UserCircle />
     </div>
   )
@@ -34,7 +32,6 @@ const ThemeIcon = () => {
   );
 };
 
-const BellIcon = () => <FaRegBell size='24' className='top-navigation-icon' />;
-const UserCircle = () => <FaUserCircle size='24' className='top-navigation-icon' />;
+const UserCircle = () => <FaUserCircle size='24' className='top-navigation-icon user-icon' />;
 const Title = () => <h5 className='title-text'>Sebii</h5>;
 

@@ -39,7 +39,8 @@
     text-white dark:text-vvprimary-darkblend
     bg-vvprimary-darkblend dark:bg-white 
     text-xs font-bold 
-    transition-all duration-100 scale-0 origin-left;
+    transition-all duration-100 scale-0 origin-left 
+    z-10; /* Ensure tooltip is always visible */
   }
 
   /* Divider */
@@ -68,7 +69,11 @@
   }
 
   .top-navigation-icon:first {
-    @apply ml-auto mr-4;
+    @apply ml-auto;
+  }
+
+  .user-icon {
+    @apply mr-12
   }
 
   .title-text {
