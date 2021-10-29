@@ -1,4 +1,7 @@
-import React, { ReactElement, useContext } from 'react'
+import React, { ReactElement, useContext, useEffect } from 'react'
+// import toast from 'react-hot-toast';
+// import { isMobile } from 'react-device-detect';
+// import { useTheme } from 'next-themes';
 
 import MediaContext from '../contexts/media';
 import TopNavigation from "./TopNavigation";
@@ -13,6 +16,42 @@ import Twitter from './Twitter';
 
 // Contains the main social/media widget to be inserted
 export default function ContentContainer():ReactElement {
+  // const { theme } = useTheme();
+
+  // const possibleSmallScreen:boolean = isMobile &&
+  //   (screen.orientation.type === "portrait-primary" || 
+  //   screen.orientation.type === "portrait-secondary");
+
+  // useEffect(() => {
+  //   if (possibleSmallScreen && theme === "dark") {
+  //     toast(
+  //       "Consider going Landscape!",
+  //       {
+  //         icon: '📱',
+  //         duration: 5000, 
+  //         style: {
+  //           borderRadius: '5px',
+  //           background: '#150916',
+  //           color: '#fff',
+  //         }
+  //       }
+  //     )
+  //   } else if (possibleSmallScreen && theme === "light") {
+  //     toast(
+  //       "Consider going Landscape!",
+  //       {
+  //         icon: '📱',
+  //         duration: 5000, 
+  //         style: {
+  //           borderRadius: '5px',
+  //           background: '#fff',
+  //           color: '#333',
+  //         }
+  //       }
+  //     )
+  //   }
+  // }, [possibleSmallScreen, theme])
+
   // Dynamically change the media content based on user clicks on left
   const [media, _] = useContext(MediaContext);
 
