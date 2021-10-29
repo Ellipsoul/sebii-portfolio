@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // @ts-ignore Unbelievable that TS can't find this...
 import { TwitchEmbed } from 'react-twitch-embed';
 import { useTheme } from 'next-themes';
@@ -18,12 +18,11 @@ export default function Twitch() {
   // Primary means right way up, in landscape it means button on right
   const { width } = getWindowDimensions();
 
-  function getOrientation() {
-    const orientation = screen.orientation.type;
-    return orientation;
-  }
+  const [orientation, setOrientation] = useState("");
 
-  const orientation = getOrientation();
+  useEffect(() => {
+    setOrientation(screen.orientation.type);
+  }, [])
 
   const portrait:boolean = orientation === "portrait-primary" || orientation === "portrait-secondary";
   const landscape:boolean = orientation === "landscape-primary" || orientation === "landscape-secondary";
