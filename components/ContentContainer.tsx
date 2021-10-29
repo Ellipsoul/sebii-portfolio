@@ -90,6 +90,7 @@ export default function ContentContainer():ReactElement {
   }
 
   return (
+    // Just 2 parts for now, a navigatino bar and the actual media
     <div className="content-container">
       <TopNavigation />
       {/* Special width for Twitter since component doesn't behave when > 1200px */}

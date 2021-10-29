@@ -66,6 +66,7 @@
     shadow-lg;
   }
 
+  /* Applies to both the user icon and theme switcher */
   .top-navigation-icon {
     @apply mx-topbarIcon
     text-vvprimary-blend dark:text-white
@@ -84,14 +85,15 @@
     @apply mr-userIcon;
   }
 
+  /* Sebii title */
   .title-text {
     @apply text-4xl px-5
     text-vvprimary-blend dark:text-gray-50
-    tracking-wider font-semibold text-opacity-90
-    mr-auto ml-2 my-auto 
-    transition duration-300 ease-in-out;
+    tracking-wider font-semibold
+    mr-auto ml-2 my-auto;
   }
 
+  /* Entire right side container including top navigation */
   .content-container {
     @apply flex flex-col
     bg-gray-300 dark:bg-vvprimary-blend
@@ -100,20 +102,23 @@
     overflow-hidden;
   }
 
+  /* Media container */
   .media-content {
     @apply grid place-items-center h-full
       mx-mediaContentX my-mediaContextY overflow-y-auto rounded-2xl;
   }
 
+  /* Twitter width limits, margin auto essential to keep centered */
   .twitter-content {
     @apply w-4/5 mx-auto;
   }
 
+  /* Don't like having a scroller */
   .media-content::-webkit-scrollbar {
     display: none;
   }
   
-  /* Border radius can be applied to parent, so no functionality */
+  /* Border radius can be applied to parent, so no functionality for now */
   /* .frame-content {
     @apply rounded-2xl;
   } */

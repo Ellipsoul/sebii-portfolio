@@ -4,13 +4,12 @@ import { MediaProvider } from '../contexts/media';
 
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app'
-import { Toaster } from 'react-hot-toast';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     // Wrapped nicely in a theme provider to track light and dark theme
     <ThemeProvider attribute='class' defaultTheme='light'>
-      {/* On the inside, wrap the context provider */}
+      {/* On the inside, wrap the context provider. This only accepts 1 child */}
       <MediaProvider>
         {/* All components of the app are mounted here */}
         <Component {...pageProps} />

@@ -17,6 +17,7 @@ export default function TopNavigation() {
   )
 }
 
+// Custom dynamic sizes for the icons
 const iconSize:string = 'calc(30px + 1vh)';
 const iconMoonSize:string = 'calc(25px + 1vh)'
 
@@ -71,6 +72,7 @@ const UserCircle = () => {
   // Need to declare in a React function or React hook component
   const { theme } = useTheme();
 
+  // Alert the user that work is in progress
   return (
     <FaUserCircle 
       size={iconSize}
@@ -81,5 +83,5 @@ const UserCircle = () => {
 
 
 // Title on lop left
-const Title = () => <h5 className='title-text'>Sebii</h5>;
+const Title = () => <h5 className='title-text'>SEBii</h5>;
 

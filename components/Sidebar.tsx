@@ -5,6 +5,7 @@ import { BsTwitch, BsYoutube, BsSpotify, BsTwitter } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
 import MediaContext from '../contexts/media';
 
+// Differentiate between an Icon and a Divider
 export interface IconInterface {
   element: ReactElement
   isIcon: Boolean
@@ -91,6 +92,9 @@ export default function Sidebar():ReactElement {
   )
 }
 
+// Simple line divider
+const Divider = () => <hr className="sidebar-hr" />;
+
 // Individual icon component with tooltip
 const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):ReactElement => {
     // Allow sidebar to control state of loaded media
@@ -113,6 +117,3 @@ const SideBarIcon = (icon:ReactElement, text:string='Tooltip Placeholder 💡'):
     </div>
   )
 };
-
-// Simple line divider
-const Divider = () => <hr className="sidebar-hr" />;

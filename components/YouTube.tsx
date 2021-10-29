@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Simplest implementation for now, just using an iFrame of a video
 export default function YouTube() {
   return (
     <iframe 

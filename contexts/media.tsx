@@ -1,10 +1,10 @@
 import { createContext, Dispatch, ReactElement, SetStateAction, useState } from 'react';
 
 // Attempted to create context interface, but somehow Typescript is not accepting it for now
-interface MediaInterface extends Array<string|Dispatch<SetStateAction<string>>> {
-  0: string,
-  1: Dispatch<SetStateAction<string>>
-}
+// interface MediaInterface extends Array<string|Dispatch<SetStateAction<string>>> {
+//   0: string,
+//   1: Dispatch<SetStateAction<string>>
+// }
 
 // Create the context, initialise to a default of undefined
 const MediaContext = createContext<any|undefined>(undefined);
