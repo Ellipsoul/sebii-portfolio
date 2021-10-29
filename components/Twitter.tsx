@@ -12,7 +12,7 @@ export default function Twitter() {
       sourceType="profile"
       screenName="sebseb122_"
       autoHeight="true"
-      options={{width: 1200, tweetLimit: 5}}
+      options={{ width: 1200, tweetLimit: 20 }} /* Seem like Twitter can only go to 1200px*/
       theme={theme}
       noFooter
     />
