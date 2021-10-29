@@ -39,9 +39,17 @@ module.exports = {
       borderRadius: {
         'circular': '36px',
       },
+      borderWidth: {
+        'sidebarHr': 'calc(1px + 0.035vw + 0.035vh)'
+      },
       // Custom heights for top navigation
       height: {
         topbar: 'calc(3vh + 2.5rem)',
+        sidebarIcon: 'calc(0.7vh + 0.6vw + 3rem)',
+      },
+      width: {
+        sidebarIcon: 'calc(0.7vh + 0.6vw + 3rem)',
+        sidebarWidth: 'calc(5rem + 0.5vw)'
       },
       margin: {
         topbarIcon: 'calc(1.5vw)',

@@ -15,7 +15,7 @@ export interface IconInterface {
 export default function Sidebar():ReactElement {
 
   // Big brain way to dynamically size with y = mx + c
-  const iconSize:string = "calc(1.3vh + 30px)";
+  const iconSize:string = "calc(0.7vh + 0.6vw + 1.75rem)";
 
   // Array of icons and dividers
   const icons:IconInterface[] = [
@@ -84,7 +84,7 @@ export default function Sidebar():ReactElement {
   return (
     // Fixed to the top left, height of full screen, 16 units width, 0 margin
     // Flex display in column direction with background and text colour, and a shadow 
-    <div className='h-screen w-24 m-0 flex flex-col items-start
+    <div className='h-screen w-sidebarWidth m-0 flex flex-col items-start
                   bg-white dark:bg-vvprimary-dark text-white shadow-lg justify-around'>
       {icons.map((v) => v.isIcon ? SideBarIcon(v.element, v.tooltip) : v.element)}
     </div>

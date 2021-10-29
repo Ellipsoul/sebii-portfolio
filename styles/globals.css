@@ -21,7 +21,7 @@
     /* Flexbox with centered items, 2 units of margin above and below, shadow and colours */
     /* Hover animation, linearly changes colour and border shape over 300ms */
     @apply relative flex items-center justify-center 
-      h-16 w-16 mt-1 mb-1 mx-auto shadow-lg
+      h-sidebarIcon w-sidebarIcon mt-1 mb-1 mx-auto shadow-lg
       bg-vvsecondary-light dark:bg-vvprimary-blend 
       text-vvprimary-blend dark:text-gray-50
       hover:bg-vvprimary-blend dark:hover:bg-vvprimary-light
@@ -51,7 +51,7 @@
 
   /* Divider */
   .sidebar-hr {
-    @apply w-3/4 self-center mx-2 border-2 rounded-full
+    @apply w-3/4 self-center mx-2 border-sidebarHr rounded-full
     bg-vvprimary-darkblend dark:bg-white
     border-vvprimary-darkblend dark:border-white;
   }
