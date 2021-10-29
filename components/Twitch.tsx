@@ -18,10 +18,10 @@ export default function Twitch() {
   // Width is relative to the device orientation
   // Primary means right way up, in landscape it means button on right
   const { width } = getWindowDimensions();
-  const portrait:boolean = screen.orientation.type === "portrait-primary" || 
-                            screen.orientation.type === "portrait-secondary";
-  const landscape:boolean = screen.orientation.type === "landscape-primary" || 
-                            screen.orientation.type === "landscape-secondary";
+  const portrait:boolean = screen?.orientation.type === "portrait-primary" || 
+                            screen?.orientation.type === "portrait-secondary";
+  const landscape:boolean = screen?.orientation.type === "landscape-primary" || 
+                            screen?.orientation.type === "landscape-secondary";
   // Show chat only if width is sufficiently large
   const withChat:boolean = (portrait && width > 425) || (landscape && width > 812); 
 
