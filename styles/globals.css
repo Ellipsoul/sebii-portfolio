@@ -80,7 +80,7 @@
   }
 
   .content-container {
-    @apply flex flex-col 
+    @apply flex flex-col
     bg-gray-300 dark:bg-vvprimary-blend
     m-0
     h-full w-full
@@ -88,11 +88,17 @@
   }
 
   .media-content {
-    @apply grid place-items-center flex-grow p-5 overflow-y-scroll;
+    @apply grid place-items-center h-full /* */
+      m-5 overflow-y-auto rounded-2xl;
+  }
+
+  .media-content::-webkit-scrollbar {
+    display: none;
   }
   
-  .frame-content {
-    @apply rounded-l-2xl;
-  }
+  /* Border radius can be applied to parent, so no functionality */
+  /* .frame-content {
+    @apply rounded-2xl;
+  } */
 
 }

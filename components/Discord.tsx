@@ -8,7 +8,7 @@ export default function Discord() {
 
   return (
     <iframe 
-      className='rounded-xl'
+      className='frame-content'
       src={urlSource}
       width="100%" 
       height="100%" 

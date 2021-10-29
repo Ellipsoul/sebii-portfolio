@@ -41,7 +41,7 @@ module.exports = {
       },
       // Custom heights for top navigation
       height: {
-        topbar: 'calc(2vh + 40px)',
+        topbar: 'calc(3vh + 2.5rem)',
       }
     },
   },
