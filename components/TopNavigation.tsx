@@ -5,6 +5,7 @@ import {
   FaSun,
 } from 'react-icons/fa';
 import { useTheme } from 'next-themes';
+import toast from 'react-hot-toast';
 
 export default function TopNavigation() {
   return (
@@ -35,6 +36,50 @@ const ThemeIcon = () => {
   );
 };
 
-const UserCircle = () => <FaUserCircle size={iconSize} className='top-navigation-icon user-icon' />;
+// Toast that this is under construction, dynamic to theme
+const handleInProgressToast = (theme:string|undefined):void => {
+  if (theme === "light") {
+    toast(
+      "Coming Soon!",
+      {
+        icon: '🔧',
+        duration: 2500,
+        style: {
+          borderRadius: '5px',
+          background: '#fff',
+          color: '#333',
+        }
+      }
+    )
+  } else if (theme === "dark") {
+    toast(
+      "Coming Soon!",
+      {
+        icon: '🔧',
+        duration: 2500,
+        style: {
+          borderRadius: '5px',
+          background: '#150916',
+          color: '#fff',
+        }
+      })
+  }
+}
+
+// User profile
+const UserCircle = () => {
+  // Need to declare in a React function or React hook component
+  const { theme } = useTheme();
+
+  return (
+    <FaUserCircle 
+      size={iconSize}
+      className='top-navigation-icon user-icon' 
+      onMouseDown={() => handleInProgressToast(theme)}/>
+  );
+}
+
+
+// Title on lop left
 const Title = () => <h5 className='title-text'>Sebii</h5>;
 
