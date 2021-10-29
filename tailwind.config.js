@@ -42,6 +42,10 @@ module.exports = {
       // Custom heights for top navigation
       height: {
         topbar: 'calc(3vh + 2.5rem)',
+      },
+      margin: {
+        topbarIcon: 'calc(1.5vw)',
+        userIcon: 'calc(0.5rem + 2.5vw)',
       }
     },
   },

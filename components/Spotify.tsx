@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 export default function Spotify():ReactElement {
   const { theme } = useTheme();
 
-  const urlSource:string = theme === "dark" ? 
+  const urlSource:string = theme === "light" ? 
     'https://open.spotify.com/embed/album/5A2VPzbzuv1EpSoie07kFe?theme=1' :
     'https://open.spotify.com/embed/album/5A2VPzbzuv1EpSoie07kFe?theme=0'
 
