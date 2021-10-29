@@ -1,4 +1,4 @@
-import { createContext, Dispatch, ReactElement, SetStateAction, useState } from 'react';
+import { createContext, ReactElement, useState } from 'react';
 
 // Attempted to create context interface, but somehow Typescript is not accepting it for now
 // interface MediaInterface extends Array<string|Dispatch<SetStateAction<string>>> {

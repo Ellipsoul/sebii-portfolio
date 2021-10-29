@@ -24,8 +24,8 @@ const iconMoonSize:string = 'calc(25px + 1vh)'
 // Icon that toggles the theme
 const ThemeIcon = () => {
   // Built in theme handler, which also stores 'theme' into localstorage
-  const {theme, setTheme} = useTheme();
   const handleMode = () => { setTheme(theme === 'dark' ? 'light' : 'dark'); }
+  const {theme, setTheme} = useTheme();
 
   // Render a sun or moon depending on the current theme
   return (
