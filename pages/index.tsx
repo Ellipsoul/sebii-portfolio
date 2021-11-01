@@ -10,7 +10,7 @@ export default function App():ReactElement {
   return (
     // Full screen with flexbox and aligning items to the left
     <main className='flex h-screen w-screen items-start'>
-      <Metatags title="Sebii" />
+      <Metatags title="SEBii" />
 
       <Sidebar key={uuidv4()}/>
       <ContentContainer key={uuidv4()}/>
