@@ -72,9 +72,9 @@ export default function ContentContainer():ReactElement {
       case 'SoundCloud':
         component = <SoundCloud />
         break
-      case 'Tiktok':
-        component = <Tiktok />
-        break
+      // case 'Tiktok':
+      //   component = <Tiktok />
+      //   break
       case 'YouTube':
         component = <YouTube />
         break

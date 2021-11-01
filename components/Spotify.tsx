@@ -6,8 +6,8 @@ export default function Spotify():ReactElement {
   // Only 2 themes available. 1 -> Playlist colour, 2 -> Black
   const { theme } = useTheme();
   const urlSource:string = theme === "light" ? 
-    'https://open.spotify.com/embed/album/5A2VPzbzuv1EpSoie07kFe?theme=1' :
-    'https://open.spotify.com/embed/album/5A2VPzbzuv1EpSoie07kFe?theme=0'
+    'https://open.spotify.com/embed/artist/5fAix5NwfNgHQqYRrHIPxo?theme=1' :
+    'https://open.spotify.com/embed/artist/5fAix5NwfNgHQqYRrHIPxo?theme=0'
 
   return (
     <iframe 

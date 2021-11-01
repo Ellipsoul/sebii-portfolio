@@ -58,13 +58,13 @@ export default function Sidebar():ReactElement {
       isIcon: true, 
       tooltip: "Twitter"
     },
-    {
-      element: <FaTiktok 
-        size={iconSize} 
-        key={uuidv4()} />, 
-      isIcon: true, 
-      tooltip: "Tiktok"
-    },
+    // {
+    //   element: <FaTiktok 
+    //     size={iconSize} 
+    //     key={uuidv4()} />, 
+    //   isIcon: true, 
+    //   tooltip: "Tiktok"
+    // },
     {
       element: <BsYoutube 
         size={iconSize} 
