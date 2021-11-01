@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes'
 export default function Discord() {
   // Dynamically render the widget theme based on current user theme
   const { theme } = useTheme();
-  const urlSource:string = `https://discord.com/widget?id=729302391723393057&theme=${theme}` 
+  const urlSource:string = `https://discord.com/widget?id=891740231521423360&theme=${theme}` 
 
   // Embed directly retrieved from Discord playlist
   return (

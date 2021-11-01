@@ -120,7 +120,7 @@
   
   /* Border radius can be applied to parent, so no functionality for now */
   /* .frame-content {
-    @apply rounded-2xl;
+    @apply rounded-2xl; 
   } */
 
 }
